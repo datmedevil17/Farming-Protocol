@@ -1,0 +1,3 @@
+export default function Input({ className = '', type = "text", ...props }) {
+    return ( <input type={type} {...props} className={`w-full px-4 py-2.5 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400/60 disabled:opacity-60 disabled:cursor-not-allowed transition-colors ${className}`} /> );
+}
