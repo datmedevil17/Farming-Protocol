@@ -1,12 +1,13 @@
 // lib/contracts.js
 
-// --- LIVE CONTRACT DETAILS (FOR SEPOLIA TESTNET) ---
+// --- LIVE CONTRACT DETAILS (FOR ROOTSTOCK Mainnet/Testnet) ---
 
-// === IMPORTANT: Replace undefined addresses with your deployed Sepolia addresses ===
+// === Addresses updated based on user input ===
 
 // 1. Investment Platform Contract
-export const investmentDeckManagerAddress = '0xC376e6B0Fd89bCc248aF3e63Fc315F5F0a50BDC7'; // <<< Use your deployed Sepolia address
-export const investmentDeckManagerABI = [ // <<< InvestmentPlatform ABI (as provided)
+
+export const investmentDeckManagerAddress = '0xEd1DAe049e0a49f6B7a42f84e22350278662cFd5'; // <<< UPDATED ADDRESS
+export const investmentDeckManagerABI = [ // <<< InvestmentPlatform ABI (as provided before)
 	{ inputs: [{ internalType: "address payable", name: "_tokenAddress", type: "address" }, { internalType: "address", name: "initialOwner", type: "address" }], stateMutability: "nonpayable", type: "constructor" },
 	{ inputs: [{ internalType: "address", name: "owner", type: "address" }], name: "OwnableInvalidOwner", type: "error" },
 	{ inputs: [{ internalType: "address", name: "account", type: "address" }], name: "OwnableUnauthorizedAccount", type: "error" },
@@ -37,9 +38,9 @@ export const investmentDeckManagerABI = [ // <<< InvestmentPlatform ABI (as prov
 ];
 
 // 2. Platform Token Contract
-export const platformTokenAddress = '0xDcC7Fd67f4fB868F296630AE9f8846Eff09DdBB4'; // <<< Use your deployed Sepolia address
-export const platformTokenABI = [ // <<< Full PlatformToken ABI (derived from your contract code)
-    // Standard ERC20 + Extensions
+
+export const platformTokenAddress = '0xc4eD4Bd20F0Ac61f4e3e1dE64547c84955ad6d60'; // <<< UPDATED ADDRESS
+export const platformTokenABI = [ // <<< Full PlatformToken ABI (as provided before)
 	{ inputs: [], name: "name", outputs: [{ internalType: "string", name: "", type: "string" }], stateMutability: "view", type: "function" },
     { inputs: [], name: "symbol", outputs: [{ internalType: "string", name: "", type: "string" }], stateMutability: "view", type: "function" },
     { inputs: [], name: "decimals", outputs: [{ internalType: "uint8", name: "", type: "uint8" }], stateMutability: "view", type: "function" },
@@ -54,7 +55,6 @@ export const platformTokenABI = [ // <<< Full PlatformToken ABI (derived from yo
     { inputs: [], name: "owner", outputs: [{ internalType: "address", name: "", type: "address" }], stateMutability: "view", type: "function" },
     { inputs: [], name: "renounceOwnership", outputs: [], stateMutability: "nonpayable", type: "function" },
     { inputs: [{ internalType: "address", name: "newOwner", type: "address" }], name: "transferOwnership", outputs: [], stateMutability: "nonpayable", type: "function" },
-    // Custom PlatformToken Functions
     { inputs: [], name: "tokenPrice", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
     { inputs: [{ internalType: "address", name: "initialOwner", type: "address" }], stateMutability: "nonpayable", type: "constructor" },
     { inputs: [{ internalType: "address", name: "to", type: "address" }, { internalType: "uint256", name: "amount", type: "uint256" }], name: "mint", outputs: [], stateMutability: "nonpayable", type: "function" },
@@ -62,12 +62,10 @@ export const platformTokenABI = [ // <<< Full PlatformToken ABI (derived from yo
     { inputs: [{ internalType: "uint256", name: "newPrice", type: "uint256" }], name: "setTokenPrice", outputs: [], stateMutability: "nonpayable", type: "function" },
     { inputs: [], name: "withdrawETH", outputs: [], stateMutability: "nonpayable", type: "function" },
     { stateMutability: "payable", type: "receive" },
-    // Events
     { anonymous: false, inputs: [ { indexed: true, internalType: "address", name: "owner", type: "address" }, { indexed: true, internalType: "address", name: "spender", type: "address" }, { indexed: false, internalType: "uint256", name: "value", type: "uint256" } ], name: "Approval", type: "event" },
     { anonymous: false, inputs: [ { indexed: true, internalType: "address", name: "from", type: "address" }, { indexed: true, internalType: "address", name: "to", type: "address" }, { indexed: false, internalType: "uint256", name: "value", type: "uint256" } ], name: "Transfer", type: "event" },
     { anonymous: false, inputs: [ { indexed: true, internalType: "address", name: "previousOwner", type: "address", }, { indexed: true, internalType: "address", name: "newOwner", type: "address" } ], name: "OwnershipTransferred", type: "event" },
     { anonymous: false, inputs: [ { indexed: true, internalType: "address", name: "buyer", type: "address" }, { indexed: false, internalType: "uint256", name: "amountOfETH", type: "uint256" }, { indexed: false, internalType: "uint256", name: "amountOfTokens", type: "uint256" } ], name: "TokensPurchased", type: "event" },
-    // Errors (from Ownable)
     { inputs: [{ internalType: "address", name: "owner", type: "address" }], name: "OwnableInvalidOwner", type: "error" },
 	{ inputs: [{ internalType: "address", name: "account", type: "address" }], name: "OwnableUnauthorizedAccount", type: "error" },
 ];
