@@ -20,12 +20,12 @@ export default function BenefitCard({ icon: Icon, title, description, variants }
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-400">{description}</p>
         {/* Optional Learn More Link - adjust href as needed */}
-        <Link
+        {/* <Link
           href="#"
           className="inline-flex items-center text-indigo-400 mt-2 hover:text-indigo-300 transition-colors text-sm"
         >
           Learn more <ChevronRight className="h-4 w-4 ml-1" />
-        </Link>
+        </Link> */}
       </div>
     </motion.div>
   );
