@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { formatBalance } from '@/lib/utils';
 import Card from './ui/Card';
-import DeckAnalysisPopover from './DeckAnalysisPopover'; // Ensure this import path is correct
 
 export default function DeckCard({ deck, isLoading }) {
   if (isLoading) { /* ... Loading Skeleton ... */ return ( <Card className="animate-pulse !bg-gray-800/80" border={false}><div className="h-5 bg-gray-700 rounded w-3/4 mb-3"></div><div className="h-4 bg-gray-700 rounded w-1/2 mb-4"></div><div className="space-y-2"><div className="flex justify-between items-center"><div className="h-3 bg-gray-700 rounded w-1/4"></div><div className="h-4 bg-gray-700 rounded w-1/3"></div></div><div className="flex justify-between items-center"><div className="h-3 bg-gray-700 rounded w-1/3"></div><div className="h-4 bg-gray-700 rounded w-1/4"></div></div></div><div className="h-6 bg-gray-600 rounded w-1/3 mt-5 ml-auto"></div></Card> ); }
@@ -24,10 +23,7 @@ export default function DeckCard({ deck, isLoading }) {
                          {name || `Deck ${id}`}
                     </Link>
                 </h3>
-                {/* Render the Popover Trigger */}
-                <div className="flex-shrink-0 -mt-1"> {/* Adjust margin slightly */}
-                    <DeckAnalysisPopover deckId={id} />
-                </div>
+                
             </div>
             <p className="text-xs sm:text-sm text-gray-400 mb-4 line-clamp-2">{description || 'No description provided.'}</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm mb-4">
