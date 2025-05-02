@@ -528,10 +528,7 @@ export default function CreateDeckPage() {
             <>
              {/* Overlayed Text (Remains Unchanged) */}
              <div className="absolute inset-x-0 top-6 sm:top-8 text-center p-4 z-10 pointer-events-none">
-                <h3 className="text-lg sm:text-xl font-semibold text-blue-200/90 mb-1 drop-shadow-md">Interactive Crystal</h3>
-                <p className="text-gray-400 text-xs sm:text-sm max-w-sm mx-auto drop-shadow">
-                   Move your mouse to see it refract light.
-                </p>
+                
               </div>
               {/* 3D Canvas - Full Card */}
               <div className="absolute inset-0 w-full h-full cursor-pointer">
