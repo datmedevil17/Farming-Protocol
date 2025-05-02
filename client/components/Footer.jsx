@@ -1,7 +1,6 @@
-"use client"
 
 import { Inter } from "next/font/google"
-import "./globals.css"
+// import "./globals.css"
 import { Web3Provider } from "@/lib/wagmi"
 import Link from "next/link"
 import ConnectWallet from "@/components/ConnectWallet"
@@ -35,7 +34,7 @@ function Header() {
   ]
 
   return (
-    <header className="bg-gradient-to-r from-gray-900 via-gray-850 to-gray-900  top-0 z-50 border-b border-gray-700/50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.4)]">
+    <header className="bg-gradient-to-r from-gray-900 via-gray-850 to-gray-900 sticky top-0 z-50 border-b border-gray-700/50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.4)]">
       {/* Desktop Navigation */}
       <div className="container mx-auto px-6">
         <nav className="h-20 hidden md:flex justify-between items-center">
