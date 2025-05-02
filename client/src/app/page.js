@@ -58,7 +58,7 @@ function ParticleBackground() {
 }
 
 // --- Chart data and options ---
-const lineChartData = { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], datasets: [ { label: "Portfolio Growth", data: [10, 25, 20, 30, 45, 60], borderColor: "#8B5CF6", backgroundColor: "rgba(139, 92, 246, 0.1)", tension: 0.4, fill: true, }, { label: "Market Average", data: [15, 20, 15, 25, 30, 40], borderColor: "#EC4899", backgroundColor: "rgba(236, 72, 153, 0.1)", tension: 0.4, fill: true, }, ], };
+const lineChartData = { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], datasets: [ { label: "RootInvest", data: [10, 25, 20, 30, 45, 60], borderColor: "#8B5CF6", backgroundColor: "rgba(139, 92, 246, 0.1)", tension: 0.4, fill: true, }, { label: "Market Average", data: [15, 20, 15, 25, 30, 40], borderColor: "#EC4899", backgroundColor: "rgba(236, 72, 153, 0.1)", tension: 0.4, fill: true, }, ], };
 const pieChartData = { labels: ["BTC", "ETH", "RBTC", "Other"], datasets: [ { data: [40, 30, 20, 10], backgroundColor: [ "rgba(139, 92, 246, 0.8)", "rgba(99, 102, 241, 0.8)", "rgba(236, 72, 153, 0.8)", "rgba(45, 212, 191, 0.8)", ], borderColor: ["rgba(139, 92, 246, 1)", "rgba(99, 102, 241, 1)", "rgba(236, 72, 153, 1)", "rgba(45, 212, 191, 1)"], borderWidth: 1, }, ], };
 const chartOptions = { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: "top", labels: { color: "rgba(255, 255, 255, 0.7)", }, }, }, scales: { y: { grid: { color: "rgba(255, 255, 255, 0.1)", }, ticks: { color: "rgba(255, 255, 255, 0.7)", }, }, x: { grid: { color: "rgba(255, 255, 255, 0.1)", }, ticks: { color: "rgba(255, 255, 255, 0.7)", }, }, }, };
 const pieChartOptions = { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: "right", labels: { color: "rgba(255, 255, 255, 0.7)", }, }, }, };
@@ -109,9 +109,9 @@ export default function LandingPage() {
                  </div>
               </motion.div>
               <motion.div className="flex flex-wrap gap-4 mt-8" variants={staggerContainer} initial="hidden" animate="visible">
-                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">BTC</div> <div className="text-lg font-medium">${cryptoPrice.btc.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div> </motion.div>
-                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">ETH</div> <div className="text-lg font-medium">${cryptoPrice.eth.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div> </motion.div>
-                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">RBTC</div> <div className="text-lg font-medium">${cryptoPrice.rbtc.toLocaleString(undefined, { maximumFractionDigits: 2 })}</div> </motion.div>
+                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">BTC</div> <div className="text-lg font-medium">96,994.06</div> </motion.div>
+                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">ETH</div> <div className="text-lg font-medium">1,837.07</div> </motion.div>
+                  <motion.div className="bg-gray-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-700/50" variants={fadeIn} whileHover={{ scale: 1.05 }}> <div className="text-xs text-gray-400">RBTC</div> <div className="text-lg font-medium">93,304.64</div> </motion.div>
               </motion.div>
             </motion.div>
             <div className="flex-1 flex justify-center h-[400px] md:h-[500px]">
@@ -189,9 +189,9 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-950 py-8 border-t border-gray-800/50">
+      {/* <footer className="bg-gray-950 py-8 border-t border-gray-800/50">
          <div className="container mx-auto px-4"> <div className="flex flex-col md:flex-row justify-between items-center"> <div className="mb-4 md:mb-0"> <p className="text-gray-400">© {new Date().getFullYear()} RootInvest</p> </div> <div className="flex items-center"> <span className="text-gray-400 mr-2">Built on</span> <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-medium"> Rootstock </div> </div> </div> </div>
-       </footer>
+       </footer> */}
 
        <style jsx>{` @keyframes tilt { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } } .animate-tilt { animation: tilt 10s infinite linear; } @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } } .animate-fade-in { animation: fade-in 0.5s ease-out forwards; } `}</style>
     </div>
