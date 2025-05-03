@@ -1,10 +1,9 @@
-# RootInvest (Rootstock Testnet DApp)
+# RootInvest - Defi on RootStock
 
 
-A web application for discovering, investing in, and managing cryptocurrency investment strategies (“Decks”) on the blockchain.  
-Built for the *Sepolia testnet*, users connect their crypto wallet (e.g. MetaMask) to explore and interact with the platform.
+Welcome to **RootInvest**, a decentralized application (dApp) empowering users to interact with diverse cryptocurrency investment strategies directly on the secure **Rootstock network**. Connect your wallet (like Metamask) to explore a marketplace of "Decks" – curated investment strategies created by the community or the platform.
 
-
+This platform allows you to browse various investment approaches, from yield farming to growth token baskets, all within the Rootstock ecosystem which leverages Bitcoin's security. Invest using the platform's native token (PTK), track your portfolio's performance, withdraw profits, and even create your own Decks for others to join. An integrated AI provides snapshot overviews of deck statistics to offer additional perspective.
 
 ## ▶ Demo Video
 
@@ -37,7 +36,7 @@ Click the thumbnail below to watch a walkthrough of RootInvest:
 - *Create Deck*  
   Build new investment strategies (fee & approval required).  
 - *Buy Token*  
-  Swap Sepolia ETH for the platform’s native token in-app.
+  Swap RTBTC for the platform’s native token in-app.
 
 
 
@@ -78,7 +77,7 @@ Form-based UI to define strategy parameters, pay creation fee, and submit for ap
 
 ### 6. Buy Token  
 
-In-app swap interface to buy the platform’s token with Sepolia ETH.  
+In-app swap interface to buy the platform’s token with RTBTC.  
 
 ![Buy Token](https://github.com/user-attachments/assets/8d593556-c935-47b2-aa5e-575b40546442)
 
