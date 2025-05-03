@@ -9,6 +9,7 @@ This platform allows you to browse various investment approaches, from yield far
 
 Click the thumbnail below to watch a walkthrough of RootInvest:
 
+[![RootInvest Demo Video Thumbnail](https://github.com/user-attachments/assets/0bee60d3-1e88-4da1-9ad6-c1b1895b4347)](https://youtu.be/kpFY0i-Czyo)
 
 
 
