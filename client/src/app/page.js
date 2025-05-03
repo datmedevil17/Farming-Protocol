@@ -101,7 +101,7 @@ export default function LandingPage() {
             <motion.div className="flex-1 space-y-6 z-10" initial="hidden" animate="visible" variants={staggerContainer}>
               <div className="flex items-center gap-2 mb-8"> <div className="h-10 w-10 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center"><span className="font-bold text-xl">R</span></div> <span className="font-bold text-2xl">RootInvest</span> </div>
                <motion.h1 variants={fadeIn} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"> Smart Decentralized Investing on{" "} <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500"> Rootstock </span> </motion.h1>
-               <motion.p variants={fadeIn} className="text-xl text-gray-300"> Discover, analyze, and invest in curated crypto strategies (Decks), or create your own. Powered by Bitcoin's security via Rootstock. </motion.p>
+               <motion.p variants={fadeIn} className="text-xl text-gray-300"> Discover, analyze, and invest in curated crypto strategies (Decks), or create your own. Powered by Bitcoins security via Rootstock. </motion.p>
               <motion.div className="pt-4" variants={fadeIn}>
                  <div className="relative group inline-block">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
