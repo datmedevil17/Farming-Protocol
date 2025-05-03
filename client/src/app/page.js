@@ -154,9 +154,7 @@ export default function LandingPage() {
               <FeatureCard icon={BarChart3} title="Manage & Track" description="Monitor investments in real-time on your personal dashboard. Track performance and withdraw earned profits seamlessly." variants={fadeIn} />
               <FeatureCard icon={Plus} title="Create & Share" description="Design and launch your own investment Decks for the community to invest in (Creator fee applies)." variants={fadeIn} />
             </motion.div>
-            <motion.div className="mt-12 text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <FeatureCard icon={MessageCircle} title="Get Support" description="Have questions? Our integrated AI Chatbot is available 24/7 to assist you." className="max-w-md mx-auto" variants={fadeIn} />
-            </motion.div>
+            
           </div>
         </section>
 
@@ -173,27 +171,74 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section id="cta" className="py-20 relative overflow-hidden">
-          <motion.div className="container mx-auto px-4 text-center relative z-10" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Join the future of decentralized finance today and take control of your crypto investments. </p>
-             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
-                 <div className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                    <Button onClick={handleConnect} disabled={isConnectPending} loading={isConnectPending} variant="primary" className="relative !px-8 !py-3 !text-lg"> {isConnectPending ? 'Connecting...' : 'Connect Wallet'} <ArrowRight className="ml-2 h-5 w-5" /> </Button>
-                 </div>
-              </motion.div>
-               {showError && ( <p className='mt-6 text-sm text-red-400 animate-fade-in'>{showError}</p> )}
-          </motion.div>
-          <div className="absolute inset-0 -z-10"> <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-indigo-900/20 to-purple-900/20 blur-3xl animate-pulse"></div> <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-purple-900/10 to-pink-900/10 blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div> <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-blue-900/10 to-indigo-900/10 blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div> </div>
+        {/* FAQ Section */}
+        <section id="faq" className="py-24 relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="max-w-3xl mx-auto text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+            >
+              <motion.h2 variants={fadeIn} className="text-4xl font-bold mb-4">
+                Frequently Asked Questions
+              </motion.h2>
+              <motion.p variants={fadeIn} className="text-gray-400 text-lg">
+                Everything you need to know about investing with RootInvest.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="space-y-6 max-w-4xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+            >
+              {[
+                {
+                  question: "What is RootInvest?",
+                  answer:
+                    "RootInvest is a decentralized investment platform built on Rootstock, combining Bitcoin's security with DeFi innovation.",
+                },
+                {
+                  question: "How do I connect my wallet?",
+                  answer:
+                    "Simply click on 'Connect Wallet' and select your preferred Web3 wallet like MetaMask or WalletConnect.",
+                },
+                {
+                  question: "Are my funds safe?",
+                  answer:
+                    "Security is our top priority. RootInvest leverages Rootstock's Bitcoin merge-mining for robust, decentralized protection.",
+                },
+                {
+                  question: "What cryptocurrencies are supported?",
+                  answer:
+                    "We currently support RBTC, BTC, ETH, and a curated selection of DeFi assets on Rootstock. More coming soon!",
+                },
+              ].map((faq, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={fadeIn}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gray-800/30 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50"
+                >
+                  <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-r from-purple-900/20 to-indigo-900/20 blur-3xl -z-10 animate-pulse"></div>
         </section>
       </main>
 
-      {/* <footer className="bg-gray-950 py-8 border-t border-gray-800/50">
-         <div className="container mx-auto px-4"> <div className="flex flex-col md:flex-row justify-between items-center"> <div className="mb-4 md:mb-0"> <p className="text-gray-400">© {new Date().getFullYear()} RootInvest</p> </div> <div className="flex items-center"> <span className="text-gray-400 mr-2">Built on</span> <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-medium"> Rootstock </div> </div> </div> </div>
-       </footer> */}
+   
 
-       <style jsx>{` @keyframes tilt { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } } .animate-tilt { animation: tilt 10s infinite linear; } @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } } .animate-fade-in { animation: fade-in 0.5s ease-out forwards; } `}</style>
+      <style jsx>{` @keyframes tilt { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } } .animate-tilt { animation: tilt 10s infinite linear; } @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } } .animate-fade-in { animation: fade-in 0.5s ease-out forwards; } `}</style>
     </div>
   );
 }
+
+

@@ -10,7 +10,6 @@ export default function DeckCard({ deck, isLoading }) {
   const { id, name, description, status, tokenSymbol = '?', tokenDecimals = 18, currentAPY, riskLevel = 'N/A', totalInvestment = 0n } = deck;
   const formattedTVL = formatBalance(totalInvestment, tokenDecimals, 0);
   const isActive = status === 'active';
-  const riskColor = riskLevel === 'Low' ? 'text-green-400' : riskLevel === 'Medium' ? 'text-yellow-400' : 'text-red-400';
 
   return (
     <div className="relative group">
@@ -28,7 +27,6 @@ export default function DeckCard({ deck, isLoading }) {
             <p className="text-xs sm:text-sm text-gray-400 mb-4 line-clamp-2">{description || 'No description provided.'}</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm mb-4">
                 <div><span className="text-gray-500">Status:</span> <span className={`font-medium capitalize ${isActive ? 'text-green-400' : 'text-red-400'}`}>{status}</span></div>
-                <div><span className="text-gray-500">Risk:</span> <span className={`font-medium ${riskColor}`}>{riskLevel}</span></div>
                 <div><span className="text-gray-500">APY Est:</span> <span className="font-medium">{currentAPY !== undefined ? `${currentAPY.toFixed(1)}%` : '-'}</span></div>
                 <div><span className="text-gray-500">TVL:</span> <span className="font-medium">{formattedTVL} <span className='text-gray-500'>{tokenSymbol}</span></span></div>
             </div>

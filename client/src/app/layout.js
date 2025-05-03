@@ -52,10 +52,10 @@ function Header() {
   ]
 
   return (
-    <header className="bg-gradient-to-r from-gray-900 via-gray-800/90 to-gray-900 sticky top-0 z-50 border-b border-gray-700/50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.4)]">
+    <header className="bg-gradient-to-r from-gray-900 via-gray-800/90 to-gray-900  top-0 z-50 border-b border-gray-700/50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.4)]">
       {/* Desktop Navigation */}
-      <div className="container mx-auto px-6 hidden md:block">
-        <nav className="h-20 flex justify-between items-center">
+      <div className="container mx-auto px-0 hidden md:block">
+        <nav className="h-18 flex justify-around items-center">
           {/* Logo Section */}
           <Link href="/dashboard" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -82,9 +82,7 @@ function Header() {
               <span className="text-xl font-bold text-gray-100 group-hover:text-white transition-colors duration-300 tracking-tight">
                 Root<span className="text-purple-400">Invest</span>
               </span>
-              <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
-                Tokenized Assets Platform
-              </span>
+             
             </div>
           </Link>
 
