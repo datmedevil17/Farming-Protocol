@@ -94,7 +94,7 @@ Visualization of how our AI model evaluates deck performance and suggests portfo
 
 ## Deploy Link
 
-Live demo: [https://your-deployment-url.com](https://your-deployment-url.com)
+Live demo: [click here](https://farming-protocol.vercel.app/)
 
 
 
